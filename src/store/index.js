@@ -5,13 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-  },
-  getters: {
+    task: [
+      {
+        name: "予習",
+        time: "30",
+      },
+    ]
   },
   mutations: {
-  },
-  actions: {
-  },
-  modules: {
+    addItemToTask(state, payload) {
+      state.task.push(payload);
+    }
   }
 })
